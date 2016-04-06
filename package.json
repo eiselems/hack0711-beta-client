@@ -4,7 +4,7 @@
   "description": "Freeboard Frontend for the Hackathon.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "grunt;node server.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,13 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.13.3"
+  },
+  "devDependencies": {
+    "grunt": "0.4.1",
+    "grunt-contrib-concat": "0.1.3",
+    "grunt-contrib-cssmin": "0.6.1",
+    "grunt-contrib-watch": "0.5.3",
+    "grunt-contrib-uglify": "0.6.0",
+    "grunt-string-replace": "^0.2.7"
   }
 }
