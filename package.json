@@ -1,0 +1,25 @@
+{
+  "name": "hack0711-beta-client",
+  "version": "1.0.0",
+  "description": "Freeboard Frontend for the Hackathon.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eiselems/hack0711-beta-client"
+  },
+  "homepage": "https://github.com/eiselems/hack0711-beta-client",
+  "bugs": "https://github.com/eiselems/hack0711-beta-client/issues",
+  "keywords": [
+    "Freeboard",
+    "Express",
+    "Node"
+  ],
+  "author": "Marcus Eisele",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
