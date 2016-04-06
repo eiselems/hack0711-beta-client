@@ -1,0 +1,39 @@
+{
+	"version": 1,
+	"allow_edit": true,
+	"plugins": [],
+	"panes": [
+		{
+			"title": "Notifications",
+			"width": 1,
+			"row": {
+				"3": 1
+			},
+			"col": {
+				"3": 1
+			},
+			"col_width": "3",
+			"widgets": [
+				{
+					"type": "hack_notifications_plugin",
+					"settings": {
+						"notifications": "datasources[\"local api\"][\"notifications\"]"
+					}
+				}
+			]
+		}
+	],
+	"datasources": [
+		{
+			"name": "local api",
+			"type": "JSON",
+			"settings": {
+				"url": "/api/data",
+				"use_thingproxy": true,
+				"refresh": 3,
+				"method": "GET"
+			}
+		}
+	],
+	"columns": 3
+}
