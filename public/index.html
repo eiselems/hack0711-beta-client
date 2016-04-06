@@ -19,7 +19,12 @@
                     { //DOM Ready
 
                         freeboard.initialize(true);
-                        freeboard.loadDashboard(configuration, [callback])
+                        
+                        $.getJSON('/public/dash.json', function(data) {
+                                freeboard.loadDashboard(data, function() {
+                                    freeboard.setEditing(false);
+                                });
+                            });
 
                         var hashpattern = window.location.hash.match(/(&|#)source=([^&]+)/);
                         if (hashpattern !== null) {
