@@ -1,16 +1,21 @@
 'use strict';
-
 var express = require('express');
-var routes = require('./app/routes/index.js');
-
 var app = express();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+
+
+app.get('/', function(req, res){
+  res.sendFile(process.cwd() + '/public/index.html');
+});
 
 app.use('/public', express.static(process.cwd() + '/public'));
 app.use('/controllers', express.static(process.cwd() + '/app/controllers'));
 
-routes(app);
+io.on('connection', function(socket){
+  console.log('a user connected');
+});
 
-var port = process.env.PORT || 8080;
-app.listen(port, function () {
-   console.log('Node.js listening on port '+port);
+http.listen(3000, function(){
+  console.log('listening on *:3000');
 });
